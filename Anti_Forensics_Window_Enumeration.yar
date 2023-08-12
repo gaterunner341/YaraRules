@@ -4,7 +4,7 @@ rule Anti_Forensics_Windows_Enumeration_Check
 		author			= "Phillip Kittelson"
 		description		= "Signature checks for enumperation of browser windows as an anti-forensics method"
 		date			= "2023-08-12"
-		reference		= ""
+		reference		= "https://www.virustotal.com/gui/file/c8a5262e89751f231060a6740447062e34c5393a17f67d0c4eb52c7f911f3bd2/content/strings"
 		
   strings:
 		
