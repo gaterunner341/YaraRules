@@ -5,7 +5,7 @@ rule Anti_Forensics_Windows_Enumeration_Check
 		description		= "Signature checks for an anti-forensics method of enumperating program windows and checking the windows title property for a common list of debunning and forensic tools."
 		date			= "2023-08-12"
 		reference		= "https://www.virustotal.com/gui/file/c8a5262e89751f231060a6740447062e34c5393a17f67d0c4eb52c7f911f3bd2/content/strings"
-		vrsion			= "1.1"
+		version			= "1.1"
 		
   strings:
 		
