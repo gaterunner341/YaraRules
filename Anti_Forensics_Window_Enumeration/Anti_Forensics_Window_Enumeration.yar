@@ -10,9 +10,8 @@ rule Anti_Forensics_Windows_Enumeration_Check
   strings:
 		
 		$GetWindowText="GetWindowTextA" nocase wide
-		
 		$TermProcess="TerminateProcess" nocase wide
-		
+	
 		$WindowTitle1="proxifier" nocase wide
 		$WindowTitle2="graywolf" nocase wide
 		$WindowTitle3="extremedumper" nocase wide
