@@ -4,7 +4,7 @@ rule Business_Email_Uploaded_to_VirusTotal
 		author			= "Phillip Kittelson"
 		description		= "Search for your business email addresses invovled in breaches uploaded to VirusTotal"
 		date			= "2023-08-25"
-		version			= "1.0"
+		version			= "1.1"
 		
   strings:
 		
