@@ -2,18 +2,16 @@ rule Anti_Forensics_Windows_Enumeration_Check
 {
   meta:
 		author			= "Phillip Kittelson"
-		description		= "Signature checks for an anti-forensics method of enumperating program windows and checking the windows title property for a common list of debunning and forensic tools."
+		description		= "Signature checks for an anti-forensics method of enumerating program windows and checking the windows title property for a common list of debugging and forensic tools."
 		date			= "2023-08-12"
 		reference		= "https://www.virustotal.com/gui/file/c8a5262e89751f231060a6740447062e34c5393a17f67d0c4eb52c7f911f3bd2/content/strings"
 		version			= "1.1"
 		
   strings:
 		
-		$GetWindowText1="GetWindowTextA" nocase wide
-		$GetWindowText2={47 65 74 57 69 6E 64 6F 77 54 65 78 74 41}
+		$GetWindowText="GetWindowTextA" nocase wide
 		
-		$TermProcess1="TerminateProcess" nocase wide
-		$TermProcess2={54 65 72 6D 69 6E 61 74 65 50 72 6F 63 65 73 73}
+		$TermProcess="TerminateProcess" nocase wide
 		
 		$WindowTitle1="proxifier" nocase wide
 		$WindowTitle2="graywolf" nocase wide
@@ -116,5 +114,5 @@ rule Anti_Forensics_Windows_Enumeration_Check
 		
 	condition:
 		
-		($GetWindowText1 or $GetWindowText2) or ($TermProcess1 or $TermProcess2) and any of ($WindowTitle*)		
+		($GetWindowText) or ($TermProcess) and any of ($WindowTitle*)		
 }
