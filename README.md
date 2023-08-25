@@ -2,4 +2,4 @@
  
 A collection my Yara rules.
 
-When available, each YARA file (.yar) will be accompained by a sample file which woulld be detected with that definition.
+When available, each YARA file (.yar) will be accompained by a sample file which would be detected with that definition.
