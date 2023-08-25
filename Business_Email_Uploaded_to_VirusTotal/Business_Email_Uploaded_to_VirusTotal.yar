@@ -10,8 +10,9 @@ rule Business_Email_Uploaded_to_VirusTotal
 		
 		$emailString1="@businessdomain.com" nocase wide ascii
 		$emailString2="@otherbusinessdomain.com" nocase wide ascii
+		$PDF="%PDF" //Excludes PDF files which can contain lots of embeded email addresses, remove if PDF is desired.
 		
 	condition:
 		
-		any of ($emailString*)	
+		any of ($emailString*) and not $PDF at 0
 }
